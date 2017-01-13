@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+    background-color: bisque;
+    text-align: center;
+}
+
+#messages {
+    background-color: lavender;
+    position: relative;
+    margin: auto;
+    padding: 5px;
+
+    overflow-y: scroll;
+
+    width: 45em;
+    height: 50%;
+    border: 2px solid;
+}
+
+.elizaMsg, .userMsg {
+    text-align: left;
+
+    color: white;
+    border-radius: 15px;
+
+    margin: 5px;
+    padding: 5px 10px;
+    max-width: 50%;
+}
+
+.elizaMsg {
+    background-color: #2196F3;
+    float: left;
+    clear: both;
+}
+
+.userMsg {
+    background-color: #90CAF9;
+    float: right;
+    clear: both;
+}
+
+.loading {
+    display: none;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: grey;
+}
+
+#userInputContainer {
+    position: relative;
+    margin: 10px auto;
+    width: 45em;
+
+    /*border: solid;*/
+}
+
+#userInput {
+    width: 100%;
+}
+
+/* Loading Animation */
+.loading:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;
+    }
+}
