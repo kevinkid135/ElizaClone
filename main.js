@@ -29,7 +29,7 @@ function respond(userInput) {
     userInput = userInput.toLowerCase();
     // TODO create algorithm to respond to user
 
-    var reply = "Actually, I have something to do... bye.";
+    var reply = "Actually, I have better things to do... bye.";
     $('.loading').hide("fast", "swing");
     printMsg("elizaMsg", reply);
 }
