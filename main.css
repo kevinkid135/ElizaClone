@@ -41,12 +41,17 @@ body {
 }
 
 .loading {
+    height: 1em;
     display: none;
     padding: 5px;
     position: absolute;
     left: 0;
     bottom: 0;
     color: grey;
+}
+
+.typing {
+    position: fixed;
 }
 
 #userInputContainer {
@@ -62,14 +67,14 @@ body {
 }
 
 /* Loading Animation */
-.loading:after {
+.typing:after {
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
     -webkit-animation: ellipsis steps(4,end) 900ms infinite;
     animation: ellipsis steps(4,end) 900ms infinite;
     content: "\2026"; /* ascii code for the ellipsis character */
-    width: 0px;
+    width: 0;
 }
 
 @keyframes ellipsis {
