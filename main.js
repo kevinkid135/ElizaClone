@@ -198,22 +198,22 @@ function respond(rawUserInput) {
             "How do you feel when you say that?"]]
     ];
 
-    while (reply = psychobabble[i].exec(rawUserInput)){
-        alert(item[1]);
-    }
-    // var reply = invertReflection(rawUserInput);
-    // responseArr = [
-    //     "Why do you say " + reply,
-    //     "Could you elaborate more on why " + reply
-    // ];
-    // reply = responseArr[Math.floor(Math.random() * responseArr.length)];
+    // while (reply = psychobabble[i].exec(rawUserInput)){
+    //     alert(item[1]);
+    // }
+    var reply = invertReflection(rawUserInput);
+    responseArr = [
+        "Why do you say " + reply,
+        "Could you elaborate more on why " + reply
+    ];
+    reply = responseArr[Math.floor(Math.random() * responseArr.length)];
 
     // placeholder response
     // reply = "Actually, I have better things to do... bye.";
 
-    // reply = reply.charAt(0).toUpperCase() + reply.substring(1) + "?";
-    // $('.loading').hide("fast", "swing");
-    // printMsg("elizaMsg", reply);
+    reply = reply.charAt(0).toUpperCase() + reply.substring(1) + "?";
+    $('.loading').hide("fast", "swing");
+    printMsg("elizaMsg", reply);
 }
 
 /**
