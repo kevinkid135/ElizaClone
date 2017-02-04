@@ -29,7 +29,7 @@ document.getElementById("userInput")
  */
 function respond(rawUserInput) {
     rawUserInput = rawUserInput.toLowerCase();
-    psychobabble = [
+    var psychobabble = [
         [/I need (.*)/i,
             ["Why do you need temp_string?",
                 "Would it really help you to get temp_string?",
@@ -39,7 +39,8 @@ function respond(rawUserInput) {
         [/Why don\'?t you ([^\?]*)\??/i,
             ["Do you really think I don't temp_string?",
                 "Perhaps eventually I will temp_string.",
-                "Do you really want me to temp_string?"]
+                "Do you really want me to temp_string?",
+                "Why do you want me to temp_string?"]
         ],
 
         [/Why can\'?t I ([^\?]*)\??/i,
@@ -52,15 +53,23 @@ function respond(rawUserInput) {
         [/I can\'?t (.*)/i,
             ["How do you know you can't temp_string?",
                 "Perhaps you could temp_string if you tried.",
-                "What would it take for you to temp_string?"]
+                "What would it take for you to temp_string?",
+                "How do you think other people temp_string?"]
+        ],
+
+        [/I\'?m feeling (.*)/i,
+            ["Do you enjoy feeling temp_string?",
+                "Why do you tell me you're temp_string?",
+                "Why do you think you're temp_string?",
+                "Could you think of a time where temp_string caused an problem in your life?"]
         ],
 
         [/I am (.*)/i,
             ["Did you come to me because you are temp_string?",
                 "How long have you been temp_string?",
-                "How do you feel about being temp_string?"]
+                "How do you feel about being temp_string?",
+                "What makes you say you are temp_string?"]
         ],
-
 
         [/I\'?m (.*)/i,
             ["How does being temp_string make you feel?",
@@ -70,7 +79,7 @@ function respond(rawUserInput) {
         ],
 
         [/Are you ([^\?]*)\??/i,
-            ["Why does it matter whether I am temp_string?","Would you prefer it if I were not temp_string?",
+            ["Why does it matter whether I am temp_string?", "Would you prefer it if I were not temp_string?",
                 "Perhaps you believe I am temp_string.",
                 "I may be temp_string -- what do you think?"]
         ],
@@ -111,7 +120,7 @@ function respond(rawUserInput) {
         ],
 
         [/(.*) friend (.*)/i,
-            ["Tell me more about your friends.","When you think of a friend, what comes to mind?",
+            ["Tell me more about your friends.", "When you think of a friend, what comes to mind?",
                 "Why don't you tell me about a childhood friend?"]
         ],
 
@@ -174,7 +183,7 @@ function respond(rawUserInput) {
         [/I feel (.*)/i,
             ["Good, tell me more about these feelings.",
                 "Do you often feel temp_string?",
-                "When do you usually feel temp_string?","When you feel temp_string, what do you do?"]
+                "When do you usually feel temp_string?", "When you feel temp_string, what do you do?"]
         ],
 
         [/I have (.*)/i,
