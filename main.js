@@ -286,10 +286,12 @@ function respond(rawUserInput) {
         // if input matches the regex, choose a random response
         if (result != null){
             console.log(psychobabble[i][0]); // shows which regex the input matched to.
-            var subject = invertReflection(result[1]);
+            if (result[1] != null) {
+                var subject = invertReflection(result[1]);
+            }
             var responses = psychobabble[i][1];
             reply = responses[Math.floor(Math.random() * responses.length)];
-            reply =  reply.replace('temp_string', subject);
+            reply =  reply.replace('temp_string', subject); // won't do anything if temp_string is not found
             break;
         }
     }
@@ -324,6 +326,7 @@ function invertReflection(sentence) {
         "myself": "yourself"
     };
 
+    console.log(sentence);
     sentence = sentence.replace(/[.,?]/g, "");
     var word = sentence.split(" ");
     for (var i in word) {
