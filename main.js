@@ -270,6 +270,7 @@ function respond(rawUserInput) {
         [/(.*)/i,
             ["Please tell me more.",
                 "Let's change focus a bit... Tell me about your family.",
+                "Let's change focus a bit... Tell me about your friends.",
                 "Can you elaborate on that?",
                 "Why do you say that temp_string?",
                 "I see.",
@@ -284,6 +285,7 @@ function respond(rawUserInput) {
         var result = psychobabble[i][0].exec(rawUserInput);
         // if input matches the regex, choose a random response
         if (result != null){
+            console.log(psychobabble[i][0]); // shows which regex the input matched to.
             var subject = invertReflection(result[1]);
             var responses = psychobabble[i][1];
             reply = responses[Math.floor(Math.random() * responses.length)];
