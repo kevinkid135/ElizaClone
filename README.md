@@ -1,5 +1,5 @@
 ### Check it out in action
-* https://cdn.rawgit.com/kevinkid135/ElizaClone/e0b3f910/index.html
+* https://codepen.io/kevinkid135/pen/GYMYEe
 
 # About
 This is a project for CISC 352.
